@@ -27,3 +27,7 @@ testing
 ```
 
 *Added this in VS code*
+
+[Lab Report 1](https://ryan-truong.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
+
+[Lab Report 1](lab-report-1-week-2.html)
