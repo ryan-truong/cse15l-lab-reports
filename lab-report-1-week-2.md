@@ -57,5 +57,28 @@
 
 
 **Step 5: Setting an SSH key**
+* To perform this step, type `ssh-keygen` in your *client*. It will then ask for a `passphrase`, which I left empty (just click `Enter` twice)
+* A successful creation should show messages containing 
+        
+        Your identification has been saved in...
+        Your public key has been saved in...
+        The key fingerprint is: ...
+* Once this step is complete ssh to log back into the server using `ssh cs15lwi22xxx@ieng6.ucsd.edu`. On the server you will first make a directory to store the key in by utilizing the command `mkdir .ssh`
+* Log out of the server once this is complete and on the *client* copy the **public key** into the *server's* `.ssh` directory you just created by using 
+    
+        scp /Users/ryantruong/.ssh/id_rsa.pub cs15lwi22@ieng6.ucsd.edu:~/.ssh/authorized_keys
+    **IMPORTANT**: Replace `/Users/ryantruong/.ssh/id_rsa.pub` with the path that your public key was saved in (reference bullet point 2) and `cs15lwi22` with your account-specific user
+
+* A successful implementation would cause you to not have to put your password in like so
+![Image](sshkeygen_example.png)
+
 
 **Step 6: Optimize Remote Running**
+* To optimize remote running, multiple commands can be typed on one line
+* For example if we wanted to copy `WhereAmI.java` to the *server*, connected to the server, compile it, and then run it all in one command we can use 
+
+        scp WhereAmI.java cs15lwi22xxx@ieng6.ucsd.edu:~/; ssh cs15lwi22xxx@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"
+
+* To explain this, the semicolon after `scp WhereAmI.java cs15lwi22xxx@ieng6.ucsd.edu:~/` means after we copy to the server, we want to run another command, `ssh`. Then the quotation marks mean that after we connect to the server, we want to run a series of commands `javac` and `java`. Without the quotation marks, you can not run a series of commands after you `ssh`
+* Successful implementation would look like so
+![Image](optimize_example.png)
