@@ -1,4 +1,4 @@
-[Back To Home]()
+[Back To Home](https://ryan-truong.github.io/cse15l-lab-reports/)
 
 ---
 # Week 2 Lab Report: Remote Access
