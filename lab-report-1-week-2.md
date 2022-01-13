@@ -10,6 +10,8 @@
 **Step 1: Installing VS Code**
 
 * First visit [Visual Studio Code](https://code.visualstudio.com/) and follow the instructions to download the program
+
+
 * After it is opened, a successful install and opening of the program should like look the following screenshot
 
 ![Image](vscode_example.png)
