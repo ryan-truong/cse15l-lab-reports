@@ -12,7 +12,7 @@
 * First visit [Visual Studio Code](https://code.visualstudio.com/) and follow the instructions to download the program
 * After it is open, a successful install and opening of the program should like look the following screenshot
 
-[Image](vscode_example.png)
+![Image](vscode_example.png)
 
 **Step 2: Remotely Connecting**
 * First look up your course specific account for CSE15L [here](https://sdacs.ucsd.edu/~icc/index.php)
@@ -29,7 +29,7 @@
 * It will then ask you `Are you sure you want to continue connecting` type `Yes` and enter your `Password`
 * If done sucessfully your terminal will look like the following screenshot
 
-[Image](ssh_example.png)
+![Image](ssh_example.png)
 
 
 **Step 3 Trying Some Commands**
