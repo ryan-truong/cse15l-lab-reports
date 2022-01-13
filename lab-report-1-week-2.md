@@ -1,11 +1,12 @@
+# Week 2 Lab Report: Remote Access
+## *How to log onto course-specific account on* `ieng6`
+---
+
 [Back To Home](https://ryan-truong.github.io/cse15l-lab-reports/)
 
 ---
-# Week 2 Lab Report: Remote Access
 
-## *How to log onto course-specific account on* `ieng6`
 
----
 **Step 1: Installing VS Code**
 
 **Step 2: Remotely Connecting**
