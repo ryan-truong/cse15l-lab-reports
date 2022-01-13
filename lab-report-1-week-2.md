@@ -10,7 +10,7 @@
 **Step 1: Installing VS Code**
 
 * First visit [Visual Studio Code](https://code.visualstudio.com/) and follow the instructions to download the program
-* After it is open, a successful install and opening of the program should like look the following screenshot
+* After it is opened, a successful install and opening of the program should like look the following screenshot
 
 ![Image](vscode_example.png)
 
@@ -43,6 +43,7 @@
         cat <file> - prints out the contents of file
 
 * A successful run of a command should like something like
+
 ![Image](commands_example.png)
 
 **Step 4: Moving Files with** `scp`
@@ -53,6 +54,7 @@
 
 * Finally, we logged back into the server using `ssh`, compiled `WhereAmI.java` using `javac`, and then ran the program using `java`.
 * The follow results were obtained
+
 ![Image](scp_example.png)
 
 
@@ -64,12 +66,14 @@
         Your public key has been saved in...
         The key fingerprint is: ...
 * Once this step is complete ssh to log back into the server using `ssh cs15lwi22xxx@ieng6.ucsd.edu`. On the server you will first make a directory to store the key in by utilizing the command `mkdir .ssh`
-* Log out of the server once this is complete and on the *client* copy the **public key** into the *server's* `.ssh` directory you just created by using 
-    
+* Log out of the server once this is complete and on the *client*, copy the **public key** into the *server's* `.ssh` directory you just created by using
+
         scp /Users/ryantruong/.ssh/id_rsa.pub cs15lwi22@ieng6.ucsd.edu:~/.ssh/authorized_keys
-    **IMPORTANT**: Replace `/Users/ryantruong/.ssh/id_rsa.pub` with the path that your public key was saved in (reference bullet point 2) and `cs15lwi22` with your account-specific user
+
+   * **IMPORTANT**: Replace `/Users/ryantruong/.ssh/id_rsa.pub` with the path that your public key was saved in (reference bullet point 2) and `cs15lwi22` with your account-specific user
 
 * A successful implementation would cause you to not have to put your password in like so
+
 ![Image](sshkeygen_example.png)
 
 
@@ -81,4 +85,5 @@
 
 * To explain this, the semicolon after `scp WhereAmI.java cs15lwi22xxx@ieng6.ucsd.edu:~/` means after we copy to the server, we want to run another command, `ssh`. Then the quotation marks mean that after we connect to the server, we want to run a series of commands `javac` and `java`. Without the quotation marks, you can not run a series of commands after you `ssh`
 * Successful implementation would look like so
+
 ![Image](optimize_example.png)
