@@ -59,7 +59,17 @@
 **Step 4: Moving Files with** `scp`
 * First we created a Java file on our computer called `WhereAmI.java` that prints out the name of our: OS, user, home, and directory
 
+````
+class WhereAmI {
+  public static void main(String[] args) {
+    System.out.println(System.getProperty("os.name"));
+    System.out.println(System.getProperty("user.name"));
+    System.out.println(System.getProperty("user.home"));
+    System.out.println(System.getProperty("user.dir"));
+  }
+}
 
+````
 * We then used `scp` to securely copy files over from the *client* to the *server* in the following way (make sure you're logged out of the server by entering `exit` or pressing `Ctrl + D`):
         
         scp WhereAmI.java cs15lwi22zz@ieng6.ucsd.edu:~/
