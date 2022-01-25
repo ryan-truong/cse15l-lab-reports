@@ -120,3 +120,15 @@ class WhereAmI {
 * Successful implementation would look like so
 
 ![Image](optimize_example.png)
+
+* Keystrokes and time saved: Using the exact command line written in bullet 2, the total keystrokes/mouse clicks can be reduced to 10
+
+        
+        1 keystroke to use last command that was run: scp WhereAmI.java cs15lwi22xxx@ieng6.ucsd.edu:~/
+        1 keystroke to type ;
+        3 keystrokes/mouseclicks to copy and paste ssh cs15lwi22xxx@ieng6.ucsd.edu
+        5 keystrokes to copy and paste "javac WhereAmI.java; java WhereAmI"
+
+        
+* Running this on a single line saves a significant amount of time because we do not have to wait for each line to execute before continuing. Especially for the `ssh` part, since we would have to `ssh` on every line we want to perform a single command like `javac`
+
