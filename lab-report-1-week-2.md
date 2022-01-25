@@ -7,7 +7,7 @@
 ---
 
 
-**Step 1: Installing VS Code**
+# **Step 1: Installing VS Code**
 
 * First visit [Visual Studio Code](https://code.visualstudio.com/) and follow the instructions to download the program
 
@@ -16,7 +16,7 @@
 
 ![Image](vscode_example.png)
 
-**Step 2: Remotely Connecting**
+# **Step 2: Remotely Connecting**
 * First look up your course specific account for CSE15L [here](https://sdacs.ucsd.edu/~icc/index.php)
 
 
@@ -42,7 +42,7 @@
 ![Image](ssh_example.png)
 
 
-**Step 3: Trying Some Commands**
+# **Step 3: Trying Some Commands**
 
 * Once connected to the remote server there are many commands to try! Here is a list of some commands that we tried
 
@@ -56,7 +56,7 @@
 
 ![Image](commands_example.png)
 
-**Step 4: Moving Files with** `scp`
+# **Step 4: Moving Files with** `scp`
 * First we created a Java file on our computer called `WhereAmI.java` that prints out the name of our: OS, user, home, and directory
 
 ````
@@ -82,7 +82,7 @@ class WhereAmI {
 ![Image](scp_example.png)
 
 
-**Step 5: Setting an SSH key**
+# **Step 5: Setting an SSH key**
 * To perform this step, type `ssh-keygen` in your *client*. It will then ask for a `passphrase`, which I left empty (just click `Enter` twice)
 
 
@@ -106,7 +106,7 @@ class WhereAmI {
 ![Image](sshkeygen_example.png)
 
 
-**Step 6: Optimize Remote Running**
+# **Step 6: Optimize Remote Running**
 * To optimize remote running, multiple commands can be typed on one line
 
 
