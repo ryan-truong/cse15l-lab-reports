@@ -14,7 +14,7 @@
 
 * After it is opened, a successful install and opening of the program should like look the following screenshot
 
-![Image](vscode_example.png)
+![Image](labreport1_pictures/vscode_example.png)
 
 # **Step 2: Remotely Connecting**
 * First look up your course specific account for CSE15L [here](https://sdacs.ucsd.edu/~icc/index.php)
@@ -39,7 +39,7 @@
 
 * If done sucessfully your terminal will look like the following screenshot
 
-![Image](ssh_example.png)
+![Image](labreport1_pictures/ssh_example.png)
 
 
 # **Step 3: Trying Some Commands**
@@ -54,7 +54,7 @@
 
 * A successful run of a command should like something like
 
-![Image](commands_example.png)
+![Image](labreport1_pictures/commands_example.png)
 
 # **Step 4: Moving Files with** `scp`
 * First we created a Java file on our computer called `WhereAmI.java` that prints out the name of our: OS, user, home, and directory
@@ -79,7 +79,7 @@ class WhereAmI {
 
 * The follow results were obtained
 
-![Image](scp_example.png)
+![Image](labreport1_pictures/scp_example.png)
 
 
 # **Step 5: Setting an SSH key**
@@ -103,7 +103,7 @@ class WhereAmI {
 
 * A successful implementation would cause you to not have to put your password in like so
 
-![Image](sshkeygen_example.png)
+![Image](labreport1_pictures/sshkeygen_example.png)
 
 
 # **Step 6: Optimize Remote Running**
@@ -119,7 +119,7 @@ class WhereAmI {
 
 * Successful implementation would look like so
 
-![Image](optimize_example.png)
+![Image](labreport1_pictures/optimize_example.png)
 
 * Keystrokes and time saved: Using the exact command line written in bullet 2, the total keystrokes/mouse clicks can be reduced to 10
 
