@@ -62,12 +62,23 @@ Code within the linked file:
 
 ---
 # **Third Code Change**
-
+**Bug:** Printed out everything stored in the parenthesis of a link `[]()` even if it wasn't a proper link.
 
 ## Screenshot of Code Change
+![Image](labreport2_pictures/bug3.png)
 
 ## Link to Failing Test File
+[Failing Test File on GH](https://github.com/ryan-truong/markdown-parse/blob/main/test8.md)
 
+Code within the linked file:
+```
+[](a link on the first line)
+[
+```
 ## Symptom Of the Failure Inducing Input
+![Image](labreport2_pictures/symp3.png)
 
 ## Relationship Between the Bug, Symptom, and the Failure Inducing Input
+* **Cause of Bug:** Our code did not have any way of filtering what was inside the parenthesis of a markdown link. This meant that even if it wasn't a link, it would still be printed. 
+
+* **Relationship:** The bug was that there was no filter that would check to see if the link stored in a markdown link (using `[]()`) was actually a valid link, thus whatever was stored inside would be printed no matter what. The failure inducing file that exposed this (written above) contains a non-link inside the parenthesis, and the symptom that resulted from that when running was that whatever was stored in between the parenthesis would print. Since the failure inducing file showed us a symptom that we didn't expect/want, it meant that there was a bug in our program, which overall was not checking if the links are valid.
