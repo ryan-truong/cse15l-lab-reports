@@ -5,11 +5,11 @@
 ---
 
 # **First Code Change**
-**Bug:** This code change attempted to fix the infite-loop bug that occurred when non-link lines were added at the end of the file.
+**Bug:** This code change attempted to fix the infite-loop bug that occurred when non-link text lines were added at the end of the file.
 
 ## Screenshot of Code Change
 
-![Image](labreport2_pictures/first_bug.png)
+![Image](labreport2_pictures/bug1.png)
 
 ## Link to Failing Test File
 
@@ -24,7 +24,7 @@ Code within the linked file:
 ```
 
 ## Symptom Of the Failure Inducing Input
-![Image](labreport2_pictures/first_symptom.png)
+![Image](labreport2_pictures/symp1.png)
 
 ## Relationship Between the Bug, Symptom, and the Failure Inducing Input
 
