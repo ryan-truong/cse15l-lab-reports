@@ -14,7 +14,7 @@
 ## Link to Failing Test File
 
 
-[Failing Test File on GH](https://github.com/ryan-truong/markdown-parse/blob/f654b025656bd716269912381403a398678a33bc/test3.md) | [File Download](labreport2_files/test-file3.md)
+[Failing Test File on GH](https://github.com/ryan-truong/markdown-parse/blob/f654b025656bd716269912381403a398678a33bc/test3.md)
 
 Code within the linked file:
 ```
@@ -30,21 +30,25 @@ Code within the linked file:
 
 ---
 # **Second Code Change**
-
+**Bug:** This code change attempted to fix the bug of returning links for images.
 
 ## Screenshot of Code Change
-![Image](labreport2_pictures/second_bug.png)
+![Image](labreport2_pictures/bug2_1.png)
+
+![Image](labreport2_pictures/bug2_2.png)
+
+
 
 ## Link to Failing Test File
-[Failing Test File on GH]()
+[Failing Test File on GH](https://github.com/ryan-truong/markdown-parse/blob/be0005f905d56566c40a8ec6d230c4ba6244a062/test4.md)
 
 Code within the linked file:
 ```
-
+![image](test.png) [link](test.com)
 ```
 
 ## Symptom Of the Failure Inducing Input
-
+![Image](labreport2_pictures/symp2.png)
 
 ## Relationship Between the Bug, Symptom, and the Failure Inducing Input
 
