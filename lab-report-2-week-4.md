@@ -25,7 +25,7 @@ Code within the linked file:
 [)
 ```
 
-## Symptom Of the Failure Inducing Input
+## Symptom of the Failure Inducing Input
 ![Image](labreport2_pictures/symp1.png)
 
 ## Relationship Between the Bug, Symptom, and the Failure Inducing Input
@@ -52,7 +52,7 @@ Code within the linked file:
 ![image](test.png) [link](test.com)
 ```
 
-## Symptom Of the Failure Inducing Input
+## Symptom of the Failure Inducing Input
 ![Image](labreport2_pictures/symp2.png)
 
 ## Relationship Between the Bug, Symptom, and the Failure Inducing Input
@@ -75,7 +75,7 @@ Code within the linked file:
 [](a link on the first line)
 [
 ```
-## Symptom Of the Failure Inducing Input
+## Symptom of the Failure Inducing Input
 ![Image](labreport2_pictures/symp3.png)
 
 ## Relationship Between the Bug, Symptom, and the Failure Inducing Input
