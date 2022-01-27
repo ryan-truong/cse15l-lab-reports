@@ -9,9 +9,9 @@
 
 ## Screenshot of Code Change
 
-![Image](labreport2_pictures/bug1.png)
-
 ![Image](labreport2_pictures/bug1_2.png)
+
+![Image](labreport2_pictures/bug1.png)
 
 ## Link to Failing Test File
 
