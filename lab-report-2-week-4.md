@@ -5,35 +5,48 @@
 ---
 
 # **First Code Change**
-
+**Bug:** This code change attempted to fix the infite-loop bug that occurred when non-link lines were added at the end of the file.
 
 ## Screenshot of Code Change
+
 ![Image](labreport2_pictures/first_bug.png)
 
-## Link to failing test file
-[Failing Test File on GH](https://github.com/ryan-truong/markdown-parse/blob/main/test-file3.md) | [File Download](labreport2_files/test-file3.md)
+## Link to Failing Test File
+
+
+[Failing Test File on GH](https://github.com/ryan-truong/markdown-parse/blob/f654b025656bd716269912381403a398678a33bc/test3.md) | [File Download](labreport2_files/test-file3.md)
 
 Code within the linked file:
 ```
-[some text] in between (parenthesis)
+[Link](test.com)
+[Link](test2.com)
+[)
 ```
 
-## Symptom of the failure inducing input
+## Symptom Of the Failure Inducing Input
 ![Image](labreport2_pictures/first_symptom.png)
 
-## Relationship between the bug, symptom, and the failure inducing input
+## Relationship Between the Bug, Symptom, and the Failure Inducing Input
 
 ---
 # **Second Code Change**
 
 
 ## Screenshot of Code Change
+![Image](labreport2_pictures/second_bug.png)
 
-## Link to failing test file
+## Link to Failing Test File
+[Failing Test File on GH]()
 
-## Symptom of the failure inducing input
+Code within the linked file:
+```
 
-## Relationship between the bug, symptom, and the failure inducing input
+```
+
+## Symptom Of the Failure Inducing Input
+
+
+## Relationship Between the Bug, Symptom, and the Failure Inducing Input
 
 ---
 # **Third Code Change**
@@ -41,8 +54,8 @@ Code within the linked file:
 
 ## Screenshot of Code Change
 
-## Link to failing test file
+## Link to Failing Test File
 
-## Symptom of the failure inducing input
+## Symptom Of the Failure Inducing Input
 
-## Relationship between the bug, symptom, and the failure inducing input
+## Relationship Between the Bug, Symptom, and the Failure Inducing Input
