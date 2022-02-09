@@ -6,6 +6,7 @@
 
 # Copying whole markdown-parse directory into ieng6
 
+## First Option: Copying Everything
 * To copy a whole directory, use the command `scp -r . cs15lwi22xxx@ieng6.ucsd.edu:~/markdown-parse`
 * When doing so, everything in the local directory will be copied over to a directory called `markdown-parse` on the remote server (this includes all the git commits and components)
 
@@ -13,6 +14,22 @@
 ![scp_1](/labreport3_pictures/scp_1.png)
 ![scp_2](/labreport3_pictures/scp_2.png)
 ![scp_3](/labreport3_pictures/scp_3.png)
+
+## Second Option: Copying Specific Files
+* To copy over only specific files into a directory, the directory first must be made in the remote server by doing:
+
+```
+ssh cs15lwi22xxx@ieng6.ucsd.edu
+mkdir markdown-parse
+```
+
+* Then exit out of the remote server and on the local machine use `scp -r *.java *.md lib/ cs15lwi22xxx@ieng6.ucsd.edu:markdown-parse`
+
+* This will cause only the files that end with .java, .md, and the lib folder from the directory to be copied over
+
+![scp_4](/labreport3_pictures/scp_4.png)
+![scp_5](/labreport3_pictures/scp_5.png)
+
 
 # Logging into ieng6 account & compiling and running tests
 * After the whole directory is copied over, `ssh cs15lwi22xxx@ieng6.ucsd.edu` is run to log into the remote server
@@ -58,4 +75,4 @@ scp -r . cs15lwi22xxx@ieng6.ucsd.edu:~/markdown-parse-one-line; ssh cs15lwi22xxx
 
 ![scp_oneline2](/labreport3_pictures/scp_oneline2.png)
 
-* **NOTE:** Some of the git files that were copied to the remote server were not included between the screenshots
+* **NOTE:** Some of the git files that were copied to the remote server were not included between the screenshots (can also do it using second option mentioned above)
