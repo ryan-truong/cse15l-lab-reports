@@ -35,3 +35,27 @@ rm MarkdownParseTest.class
 ![ssh_test](/labreport3_pictures/ssh_test.png)
 
 # Combining `scp`, `;`, and `ssh` to copy whole directory and test in one line
+* To perform the two previous steps all in one command line, use:
+```
+scp -r . cs15lwi22xxx@ieng6.ucsd.edu:~/markdown-parse-one-line; ssh cs15lwi22xxx@ieng6.ucsd.edu "cd markdown-parse-one-line; rm MarkdownParseTest.class; rm MarkdownParse.class; /software/CSE/oracle-java-se-14/jdk-14.0.2/bin/javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; /software/CSE/oracle-java-se-14/jdk-14.0.2/bin/java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"
+```
+
+
+
+* **NOTE:** In this example, everything is copied into the remote server directory called markdown-parse-one-line because markdown-parse was already created/used in the previous steps
+
+* The commands shown below are used instead of `javac` and `java` because the way the remote server is set up uses OpenJDK when calling `ssh cs15lwi22xxx@ieng6.ucsd.edu "commands"`, which is outdated to compile our files. Thus, the specific location of the java file must be called.
+
+```
+/software/CSE/oracle-java-se-14/jdk-14.0.2/bin/javac
+/software/CSE/oracle-java-se-14/jdk-14.0.2/bin/java
+```
+
+
+
+![scp_oneline1](/labreport3_pictures/scp_oneline1.png)
+
+
+![scp_oneline2](/labreport3_pictures/scp_oneline2.png)
+
+* **NOTE:** Some of the git files that were copied to the remote server were not included between the screenshots
