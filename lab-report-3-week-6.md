@@ -18,12 +18,15 @@
 * After the whole directory is copied over, `ssh cs15lwi22xxx@ieng6.ucsd.edu` is run to log into the remote server
 * Once in the remote server, use `cd markdown-parse` to go inside the markdown-parse directory so tests can be run
 * Run the test files created by using:
+
 ```
 javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java
 
 java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest
 ```
+
 * **NOTE:** Copying over the whole directory will result in the `.class` files being copied over too, which may cause incompatability issues when running the tests. If this occurs remove the class files by using:
+
 ```
 rm MarkdownParse.class
 rm MarkdownParseTest.class
