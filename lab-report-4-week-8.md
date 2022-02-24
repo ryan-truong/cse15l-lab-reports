@@ -7,7 +7,7 @@
 # Code Snippet 1
 
 ## VSCode Preview
-![snippet1](/labreport4_pictures/snippet1.png)
+![snippet1](/labreport4_pictures/snippet1-new.png)
 
 ```
 `[a link`](url.com)
