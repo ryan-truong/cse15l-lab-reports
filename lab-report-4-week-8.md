@@ -6,7 +6,7 @@
 
 # Code Snippet 1
 
-## Commonmark Preview
+## CommonMark Preview
 ![snippet1](/labreport4_pictures/snippet1-new.png)
 
 ```
@@ -19,7 +19,7 @@
 [`code]`](ucsd.edu)
 ```
 ## What MarkdownParse Should Produce
-* Based on the commonmark preview, the last three links were clickable even if they were in code snippets, so those should be considered links
+* Based on the CommonMark preview, the last three links were clickable even if they were in code snippets, so those should be considered links
 * The first link was not clickable, which stemmed from the fact that the first open bracket was in a code snippet.
 
 ## `MarkdownParseTest.java` Test Code
@@ -35,20 +35,20 @@ public void testSnippet1() throws IOException {
 ## Test Output: My Group's Implementation
 ![Snippet 1 Output 1](/labreport4_pictures/snippet1_output-new.png)
 
-* Since the expected output was printing out all but the first link and the test failed, this means that our MarkdownParse handles this case incorrectly. Specifically, `url.com` was outputted when it was not supposed to be
+* Since the expected output was parsing all but the first link and the test failed, this means that our MarkdownParse handles this case incorrectly. Specifically, `url.com` was outputted when it was not supposed to be
 
 ## Test Output: Reviewed Group's Implementation
 ![Snippet 1 Output 2](/labreport4_pictures/snippet1_output2-new.png)
 
-* The expected output was printing out all the links except for `url.com` and the test failed, specifically `url.com` was printed and `ucsd.edu` was not printed
+* The expected output was parsing out all the links except for `url.com` and the test failed, specifically `url.com` was parsed and `ucsd.edu` was not parsed
 
 ## Answering Questions
-* 
+* A small code change may be possible to fix our MarkdownParse. For this specific test file, we don't want to print a link if the open or closed brackets are embedded in an inline code, so we can perform a check to find `` `[ `` and `` ` `` and if both those exists on the line of the link, do not output the link
 
 
 # Code Snippet 2
 
-## Commonmark Preview
+## CommonMark Preview
 ![snippet2](/labreport4_pictures/snippet2-new.png)
 
 ```
@@ -84,12 +84,13 @@ public void testSnippet2() throws IOException {
 * As shown above, the test did not pass. The reviewed group's version of MarkdownParse printed `a.com)](b.com`, which included the parenthesis and brackets in between the two links and `b.com`
 
 ## Answering Questions
-* 
+* A larger code change will be needed to make snippet 1 work. This is because the way our MarkdownParse works is that it searches for periods within a line and indexes outwards in both directions from the period until it finds stop characters like `(` and `)`.
+* Based on the actual output received, we would have to implement a check for making sure the period of the link was contained within a nested link so we don't print `b.com` and check if parenthesis are part of the link instead of stopping at them so we don't print only `a.com`
 
 # Code Snippet 3
 
-## Commonmark Preview
-![snippet3](/labreport4_pictures/snippet3-new.png)
+## CommonMark Preview
+![snippet3](/labreport4_pictures/snippet3-new2.png)
 
 ```
 [this title text is really long and takes up more than 
@@ -110,10 +111,16 @@ one line](
 And there's still some more text after that.
 
 [this link doesn't have a closing parenthesis for a while](https://cse.ucsd.edu/
+
+
+
+)
+
+And then there's more text
 ```
 
 ## What MarkdownParse Should Produce
-* Based on the commonmark preview, the only link that should be printed is `https://ucsd-cse15l-w22.github.io/` because it is the only clickable link
+* Based on the CommonMark preview, the only link that should be parsed is `https://ucsd-cse15l-w22.github.io/` because it is the only clickable link
 
 ## `MarkdownParseTest.java` Test Code
 ```
@@ -127,10 +134,13 @@ public void testSnippet3() throws IOException {
 ## Test Output: My Group's Implementation
 ![Snippet 3 Output 1](/labreport4_pictures/snippet3_output-new.png)
 
-* The test failed when ran. It was expected that only `https://ucsd-cse15l-w22.github.io/` would print, but extra output was printed such as `that.`, `"https://www.twitter.com"` and `https://cse.ucsd.edu/` twice, and all the other links
+* The test failed when ran. It was expected that only `https://ucsd-cse15l-w22.github.io/` would be parsed, but extra output was parsed such as `that.`, `"https://www.twitter.com"` and `https://cse.ucsd.edu/` twice, and all the other links
 
 ## Test Output: Reviewed Group's Implemenetation
 ![Snippet 3 Output 2](/labreport4_pictures/snippet3_output2-new.png)
 
+* This test failed when ran. It was expected that only `https://ucsd-cse15l-w22.github.io/` would be parsed, but nothing was outputted at all
+
 ## Answering Questions
-* 
+* Fixing snippet 3 is going to require a larger code change because  our group made the assumption that within a link there would be only one period which we can index out from to obtain the link, but as shown above when there are multiple periods, links get parsed multiple times. To fix this we need to implement some sort of check to find the last period within the link and ignore all the other ones
+* Another issue that needs to be addressed is that our MarkdownParse outputs out all the links within the file, even though only one was previewed as a link. To fix this we will need to implement a code change that ensures that if there is one line of empty space within the link, the link won't output and if there is no ending parenthesis, the link won't output
