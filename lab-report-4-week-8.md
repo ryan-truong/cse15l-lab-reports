@@ -33,12 +33,12 @@ public void testSnippet1() throws IOException {
 ```
 
 ## Test Output: My Group's Implementation
-![Snippet 1 Output 1](/labreport4_pictures/snippet1_output.png)
+![Snippet 1 Output 1](/labreport4_pictures/snippet1_output-new.png)
 
 * Since the expected output was printing out all but the first link and the test failed, this means that our MarkdownParse handles this case incorrectly. Specifically, `url.com` was outputted when it was not supposed to be
 
 ## Test Output: Reviewed Group's Implementation
-![Snippet 1 Output 2](/labreport4_pictures/snippet1_output2.png)
+![Snippet 1 Output 2](/labreport4_pictures/snippet1_output2-new.png)
 
 * The expected output was printing out all the links except for `url.com` and the test failed, specifically `url.com` was printed and `ucsd.edu` was not printed
 
@@ -49,7 +49,7 @@ public void testSnippet1() throws IOException {
 # Code Snippet 2
 
 ## VSCode Preview
-![snippet2](/labreport4_pictures/snippet2.png)
+![snippet2](/labreport4_pictures/snippet2-new.png)
 
 ```
 [a [nested link](a.com)](b.com)
@@ -74,12 +74,12 @@ public void testSnippet2() throws IOException {
 ```
 
 ## Test Output: My Group's Implementation
-![Snippet 2 Output 1](/labreport4_pictures/snippet2_output.png)
+![Snippet 2 Output 1](/labreport4_pictures/snippet2_output-new.png)
 
 * As shown above, the test did not pass. Our version of MarkdownParse included `b.com` and did not include the parenthesis of `a.com(())` 
 
 ## Test Output: Reviewed Group's Implemenetation
-![Snippet 2 Output 2](/labreport4_pictures/snippet2_output2.png)
+![Snippet 2 Output 2](/labreport4_pictures/snippet2_output2-new.png)
 
 * As shown above, the test did not pass. The reviewed group's version of MarkdownParse printed `a.com)](b.com`, which included the parenthesis and brackets in between the two links and `b.com`
 
@@ -89,7 +89,7 @@ public void testSnippet2() throws IOException {
 # Code Snippet 3
 
 ## VSCode Preview
-![snippet3](/labreport4_pictures/snippet3.png)
+![snippet3](/labreport4_pictures/snippet3-new.png)
 
 ```
 [this title text is really long and takes up more than 
@@ -125,12 +125,12 @@ public void testSnippet3() throws IOException {
 }
 ```
 ## Test Output: My Group's Implementation
-![Snippet 3 Output 1](/labreport4_pictures/snippet3_output.png)
+![Snippet 3 Output 1](/labreport4_pictures/snippet3_output-new.png)
 
 * The test failed when ran. It was expected that only `https://ucsd-cse15l-w22.github.io/` would print, but extra output was printed such as `that.`, `"https://www.twitter.com"` and `https://cse.ucsd.edu/` twice, and all the other links
 
 ## Test Output: Reviewed Group's Implemenetation
-![Snippet 3 Output 2](/labreport4_pictures/snippet3_output2.png)
+![Snippet 3 Output 2](/labreport4_pictures/snippet3_output2-new.png)
 
 ## Answering Questions
 * 
