@@ -6,7 +6,7 @@
 
 # Code Snippet 1
 
-## VSCode Preview
+## Commonmark Preview
 ![snippet1](/labreport4_pictures/snippet1-new.png)
 
 ```
@@ -48,7 +48,7 @@ public void testSnippet1() throws IOException {
 
 # Code Snippet 2
 
-## VSCode Preview
+## Commonmark Preview
 ![snippet2](/labreport4_pictures/snippet2-new.png)
 
 ```
@@ -88,7 +88,7 @@ public void testSnippet2() throws IOException {
 
 # Code Snippet 3
 
-## VSCode Preview
+## Commonmark Preview
 ![snippet3](/labreport4_pictures/snippet3-new.png)
 
 ```
