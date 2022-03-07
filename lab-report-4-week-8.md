@@ -4,6 +4,12 @@
 
 ---
 
+[Link to Our Group's MarkdownParse Repo](https://github.com/ryan-truong/markdown-parse-new)
+
+[Link to Reviewed Group's MarkdownParse Repo](https://github.com/bimai25/markdown-parse-brandon)
+
+---
+
 # Code Snippet 1
 
 ## CommonMark Preview
