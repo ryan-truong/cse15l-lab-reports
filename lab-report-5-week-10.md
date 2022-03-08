@@ -26,7 +26,9 @@ done
 
 * We ran the command above using our version of MarkdownParse and the CSE15L MarkdownParse and to compare the results, I used `diff results.txt ~lab9/markdown-parse/result.txt`.
 
-**NOTE:** Each implementation of MarkdownParse was stored in a different directory. So in this context, `results.txt` refers to using our group's implentation, while `~lab9/markdown-parse/result.txt` is the CSE15L implentation.
+**NOTE:** Each implementation of MarkdownParse was stored in a different directory. So in this context, `results.txt` refers to using our group's implementation, while `~lab9/markdown-parse/result.txt` is the CSE15L implementation.
+
+* After `diff` showed which lines in `result.txt` had different results, I used `vim result.txt` to find that result and see which specific test file it corresponded to (since we used `echo $file` in the script).
 
 
 # Test 1
