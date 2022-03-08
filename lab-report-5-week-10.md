@@ -56,7 +56,13 @@ done
 * Based on the output from Commonmark, all inputs are valid links, so our implentation does not parse this file correctly because we didn't parse `#fragment`, while the given CSE15L implementation does.
 
 ## Explanation of the Bug
-
+![codeblock](./labreport5_pictures/test1_code.png)
+* The reason why this bug occurs is because we made the assumption in our MarkdownParse that every link will have a `.` in it, thus we based our parsing on finding periods (as shown above).
+* This causes `#fragment` to not be printed as a link because it does not contain a period. 
+* To fix this we would have two options:
+    * 1) Completely change this `while` loop and revert back to an older implementation of MarkdownParse where we searched for `](`
+    and `)`.
+    * 2) In addition to searching for periods, add another code block that also searches for the links that contain no periods. This would be searching for elements like `](` and `)`. We would also have to perform a check to make sure we are not parsing the same link twice.
 
 # Test 2
 
@@ -87,3 +93,9 @@ okay.
 
 
 ## Explanation of the Bug
+
+![code](./labreport5_pictures/test2_code.png)
+
+* The reason why this bug occurs is because of our utilization of searching from the period and expanding out in both directions until a "stop character" is reached (shown above and explained below).
+* In our version of MarkdownParse, we search for a period and traverse both sides of the period until a stop character is reached and that will give us our link. Because a new line, `\n`, is one of our stop characters we are searching for and we search at a period no matter what, this causes `okay.` to be printed.
+* To fix this, we can add a solution to the `while(currentIndex < markdown.length())` loop in the code block shown above. Once we find the index of the period, we can create a method that will check if the period at `nextPeriodIndex` is contained within a markdown link. If the method to check returns true, then we add it to our `periodList`.
