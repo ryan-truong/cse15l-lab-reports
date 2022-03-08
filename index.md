@@ -8,3 +8,5 @@
 *[Week 6 Lab Report: Copying whole directories](lab-report-3-week-6.html)*
 
 *[Week 8 Lab Report: MarkdownParse Tests](lab-report-4-week-8.html)*
+
+*[Week 10 Lab Report: Comparing MarkdownParse](lab-report-5-week-10.html)*
